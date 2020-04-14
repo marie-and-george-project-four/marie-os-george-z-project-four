@@ -3,25 +3,32 @@
 // landing page greeting user and inviting them to generate a mealplan 
 //brief description on how mealplan app works
 
-// step one
+// STEP ONE
 // check boxes to select which diet the user follows
+// store selected diet in a varriable 
+
 // button that takes to the next step
 
-//step two
+//STEP TWO
 //checkboxes to select any food intollerances >> nuts, dairy, etc
-// if user selects diet that doest not inclue any of the food intollerances then they are eliminated from the list
+// use diet variable to check if user selects diet that doest not inclue any of the food intollerances
+// removing anycheckboxes that arent included in selected diet
+
 // button that takes to the next step
 
-
-// step three
+//STEP THREE
 // user is presented checkboxes that allow them to select the amount of days they want the mealplan for
+//selected mealplan is saved in a variable
+
 // button that evaluates the mealplan
+// all the variables collected are inputed into an AJAX request 
 
 
-//step four
-// meal plan is presented on page
+
+//STEP FOUR
+// requested data formatted into a meal plan that is presented on page
 // with nutritional information for each day that has been generated
 
-// step four provides user with the option to shuffle for more recipes, 'save the day' and build their own week,   and/or print the mealplan
+// step four provides user with the option to shuffle for more recipes, 'save the day' which saves the data for that day locally allows the user to build their own week, and/or print the mealplan
 
 // **STRETCH GOAL** with saving the day the user can also move days around to reorganize their week.
