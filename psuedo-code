@@ -1,0 +1,27 @@
+// mealplan app
+
+// landing page greeting user and inviting them to generate a mealplan 
+//brief description on how mealplan app works
+
+// step one
+// check boxes to select which diet the user follows
+// button that takes to the next step
+
+//step two
+//checkboxes to select any food intollerances >> nuts, dairy, etc
+// if user selects diet that doest not inclue any of the food intollerances then they are eliminated from the list
+// button that takes to the next step
+
+
+// step three
+// user is presented checkboxes that allow them to select the amount of days they want the mealplan for
+// button that evaluates the mealplan
+
+
+//step four
+// meal plan is presented on page
+// with nutritional information for each day that has been generated
+
+// step four provides user with the option to shuffle for more recipes, 'save the day' and build their own week,   and/or print the mealplan
+
+// **STRETCH GOAL** with saving the day the user can also move days around to reorganize their week.
