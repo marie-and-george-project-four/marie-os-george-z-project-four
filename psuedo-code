@@ -1,34 +1,37 @@
-// mealplan app
+// meal plan app
 
-// landing page greeting user and inviting them to generate a mealplan 
-//brief description on how mealplan app works
+// landing page greeting user and inviting them to generate a meal plan
+//brief description on how meal plan app works
+// using the spoonacular api 
 
 // STEP ONE
 // check boxes to select which diet the user follows
-// store selected diet in a varriable 
+// store selected diet in a variable
 
 // button that takes to the next step
 
 //STEP TWO
-//checkboxes to select any food intollerances >> nuts, dairy, etc
-// use diet variable to check if user selects diet that doest not inclue any of the food intollerances
-// removing anycheckboxes that arent included in selected diet
+//checkboxes to select any food intolerances >> nuts, dairy, etc
+// use diet variable to check if user selects diet that does not include any of the food intolerances
+// removing any checkboxes that aren't included in selected diet
 
 // button that takes to the next step
 
 //STEP THREE
-// user is presented checkboxes that allow them to select the amount of days they want the mealplan for
-//selected mealplan is saved in a variable
+// user is presented checkboxes that allow them to select the amount of days they want the meal plan for
+//selected meal plan is saved in a variable
 
-// button that evaluates the mealplan
-// all the variables collected are inputed into an AJAX request 
+// button that evaluates the meal plan
+// all the variables collected are inputted into an AJAX request
 
 
 
 //STEP FOUR
 // requested data formatted into a meal plan that is presented on page
-// with nutritional information for each day that has been generated
 
-// step four provides user with the option to shuffle for more recipes, 'save the day' which saves the data for that day locally allows the user to build their own week, and/or print the mealplan
+//**STRETCH GOAL** with nutritional information for each day that has been generated
+
+// **STRETCH GOAL** step four provides user with the option to shuffle for more recipes, 'save the day' which saves the data for that day locally allows the user to build their own week, and/or print the meal plan
 
 // **STRETCH GOAL** with saving the day the user can also move days around to reorganize their week.
+
