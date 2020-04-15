@@ -28,6 +28,7 @@
 
 //STEP FOUR
 // requested data formatted into a meal plan that is presented on page
+//when broken link is found call API again for one meal to try and replace it, if that meal is broken repeat
 
 //**STRETCH GOAL** with nutritional information for each day that has been generated
 
