@@ -1,61 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>[APPNAME]</title>
-
-    <!-- stylesheet -->
+    <title>Meal Plan App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
-
-    <!-- Google Fonts -->
-
 </head>
-<body>
-    <main>
-        <form action="">
-            <!-- welcome section -->
-            <fieldset>
-                <h1>Hi, Welcome to [APPNAME]</h1>
-                <p>[APPNAME] pairs you the with perfect meal plan based on your dietary preference, restrictions and caloric intake</p>
-                <input type="button" value="Get Started!">
-            </fieldset>
 
-            <!-- diet selection -->
-            <fieldset>
-                <legend>
-                    <h2>Let's narrow things down a bit</h2>
-                    <p>Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
+<body>
+    <main class="quiz-section">
+        <form action="#" method="#" name="diet-quiz" class="quiz-section__form" id="">
+            <fieldset class="form__stage form__stage--center-align">
+                <h1 class="main-header">Hi, Welcome to App Name</h1>
+                <p class="main-paragraph">App Name pairs you the with perfect meal plan based on your dietary preference, restrictions and caloric intake</p>
+                <button type="button" class="button button--main" id="get-started">Get Started</button>
+            </fieldset>
+            <fieldset class="form__stage form__stage--left-align">
+                <legend class="stage__description">
+                    <h2 class="main-header">Let's narrow things down a bit</h2>
+                    <p class="main-paragraph main-paragraph--left-align">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
                 </legend>
 
-                <!-- dietary  -->
-                <div>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                </div>
+                <div class="stage__container">
 
-                <div>
-                    <input type="button" value="Back">
-                    <input type="button" value="Next">
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="gluten-free" value="" required>
+                        <label for="gluten-free" class="checkbox-button main-header main-header--checkbox">Gluten Free</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="ketogenic" value="" required>
+                        <label for="ketogenic" class="checkbox-button main-header main-header--checkbox">Ketogenic</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="vegetarian" value="" required>
+                        <label for="vegetarian" class="checkbox-button main-header main-header--checkbox">Vegetarian</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="pescatarian" value="" required>
+                        <label for="pescatarian" class="checkbox-button main-header main-header--checkbox">Pescatarian</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="vegan" value="" required>
+                        <label for="vegan" class="checkbox-button main-header main-header--checkbox">Vegan</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+
+                    <div class="checkbox-pair">
+                        <input type="checkbox" name="diet-style[]" id="paleo" value="" required>
+                        <label for="paleo" class="checkbox-button main-header main-header--checkbox">Paleo</label>
+                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                    </div>
+                    
+                </div>
+                <div class="stage__buttons">
+                    <button type="button" class="button button--main button--form-nav" id="back">Back</button>
+                    <button type="button" class="button button--main button--form-nav" id="next">Next</button>
                 </div>
             </fieldset>
-
             <fieldset>
                 <legend>
                     <h2>Let's set some boundaries</h2>
-                    <p>Do you suffer from any food intolerances, allergies, or have anything in particular you really dont want in your plan?</p>
+                    <p>Do you suffer from any food intolerances, allergies, or have anything in particular you really
+                        dont want in your plan?</p>
                 </legend>
-                <!-- possible structure -->
                 <div>
                     <input type="checkbox">
                     <label for="">Gluten Free</label>
@@ -74,7 +91,6 @@
                     <input type="checkbox">
                     <label for="">Gluten Free</label>
                 </div>
-
                 <div>
                     <input type="button" value="Back">
                     <input type="button" value="Next">
@@ -83,18 +99,16 @@
             <fieldset>
                 <h2>How much food would you like?</h2>
                 <p>Give us a rough idea of how many calories per day you would like us to give you and how much planning you'd like us to do for you.</p>
-
-                <!-- dropdown menu -->
                 <input type="button"> 
-
+                <p>Give us a rough idea of how many calories per day you would like us to give you and how much planning
+                    you'd like us to do for you.</p>
+                <input type="button">
                 <div>
                     <input type="checkbox">
                     <label for="">Gluten Free</label>
                     <input type="checkbox">
                     <label for="">Gluten Free</label>
                 </div>
-
-
                 <div>
                     <input type="button" value="Back">
                     <input type="button" value="Meal Plan time!">
@@ -105,14 +119,13 @@
     <section>
         <div>
             <h3>Feast your eyes</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis mollitia saepe laudantium aliquid dignissimos quis esse, porro impedit nesciunt libero.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis mollitia saepe laudantium aliquid
+                dignissimos quis esse, porro impedit nesciunt libero.</p>
             <ul>
-                <!-- Should this be a nested span or p? -->
                 <li>Ketogenic</li>
+                <li></li>
+                <li></li>
             </ul>
-
-            <!-- food cards -->
-            <div class="food-cards">
                 <div class="food-card">
                     <div class="food-card-image">
                         <img src="http://placegoat.com/300/250" alt="">
@@ -144,14 +157,10 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </section>
-    <!-- JavaScript -->
     <script src="./scripts/script.js"></script>
-
-    <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
-
 </body>
+
 </html>
