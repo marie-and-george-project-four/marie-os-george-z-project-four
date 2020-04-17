@@ -1,0 +1,44 @@
+// global styles
+* {
+    font-family: sans-serif;
+}
+h4 {
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 700;
+}
+
+
+// food card
+.food-cards {
+    display: flex;
+    margin: 0 auto;
+    a::after {
+  content: "→";
+  padding-left: 8px;
+}
+}
+.food-card {
+    max-width: 302px;
+    width: 33vw;
+    border-radius: $border-radius;
+    border: $border-style;
+    margin: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.food-card-image {
+    img{
+        border-radius: 7px 7px 0 0;
+        width: 100%;
+    }
+}
+.food-card-text {
+    margin: 22px;
+}
