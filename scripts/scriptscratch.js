@@ -6,23 +6,23 @@ mealApp.key = 'cacba147c38b4f0faff0ce178c6edd1f'
 
 
 // gets user information and sends it to the getMeals function
-mealApp.getUserInfo = (userDiet, intollerances, calories, time) => {
+mealApp.getUserInfo = (userDiet, intolerances, calories, time) => {
     // listen for diet to be selected and assign that to userDiet
     // $('.checkbox-pair').on('click',)
 
-    // listen for intollerances to be selected and assign that to inlosserances
+    // listen for intolerances to be selected and assign that to inlosserances
 
     // listen for callories to be selected and assign that to calories
 
     // listen for day or week to be selected and assign that to time
 
     // this calls getMeals and passes all the values on
-    mealApp.getMeals(userDiet, intollerances, calories, time)
+    mealApp.getMeals(userDiet, intolerances, calories, time)
 }
 
 
 //ajax request catches user input and generates meal plan with user selections
-mealApp.getMeals = (userDiet, intollerances, calories, time) => {
+mealApp.getMeals = (userDiet, intolerances, calories, time) => {
     $.ajax({
         url: 'https://api.spoonacular.com/mealplanner/generate',
         method: 'GET',
@@ -30,7 +30,7 @@ mealApp.getMeals = (userDiet, intollerances, calories, time) => {
         data: {
             apiKey: mealApp.key,
             diet: userDiet,
-            exclude: intollerances,
+            exclude: intolerances,
             targetCalories: calories,
             timeFrame: "day",
         }
