@@ -5,118 +5,193 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Plan App</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    <!-- Thanks to FontAwesome for a few of the icons -- https://fontawesome.com/license -->
 </head>
-
 <body>
-    <main class="quiz-section">
+<!-- Add required attribute to inputs -->
+<!-- Start: contain the entire multi-step quiz up to the quiz results -->
+    <main class="quiz-section wrapper">
+        <!-- Form element containing quiz -->
         <form action="#" method="#" name="diet-quiz" class="quiz-section__form" id="">
-            <fieldset class="form__stage form__stage--center-align">
+            <!-- Start: Step 1 -->
+            <!-- Fieldsets all changed to divs because fieldsets do not respect flexbox in Chrome -->
+            <div class="form__stage form__stage--step-one">
                 <h1 class="main-header">Hi, Welcome to App Name</h1>
                 <p class="main-paragraph">App Name pairs you the with perfect meal plan based on your dietary preference, restrictions and caloric intake</p>
-                <button type="button" class="button button--main" id="get-started">Get Started</button>
-            </fieldset>
-            <fieldset class="form__stage form__stage--left-align">
-                <legend class="stage__description">
-                    <h2 class="main-header">Let's narrow things down a bit</h2>
-                    <p class="main-paragraph main-paragraph--left-align">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
-                </legend>
-
+                <button type="button" class="button" id="get-started">Get Started</button>
+            </div>
+            <!-- End: Step 1 -->
+            <!-- Start: Step 2 -->
+            <div class="form__stage form__stage--step-two">
+                <!-- Description -->
+                <div class="stage__description">
+                    <h2 class="main-header main-header--margin">Let's narrow things down a bit</h2>
+                    <p class="main-paragraph main-paragraph--step-one">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
+                </div>
+                <!-- Checkbox Container -->
                 <div class="stage__container">
-
+                    <!-- Gluten Free Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="gluten-free" value="" required>
-                        <label for="gluten-free" class="checkbox-button main-header main-header--checkbox">Gluten Free</label>
+                        <label for="gluten-free" class="checkbox-button checkbox-button--gluten-free main-header main-header--checkbox">Gluten Free</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-
+                    <!-- Ketogenic Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="ketogenic" value="" required>
-                        <label for="ketogenic" class="checkbox-button main-header main-header--checkbox">Ketogenic</label>
+                        <label for="ketogenic" class="checkbox-button checkbox-button--ketogenic main-header main-header--checkbox">Ketogenic</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-
+                    <!-- Vegetarian Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="vegetarian" value="" required>
-                        <label for="vegetarian" class="checkbox-button main-header main-header--checkbox">Vegetarian</label>
+                        <label for="vegetarian" class="checkbox-button checkbox-button--vegetarian main-header main-header--checkbox">Vegetarian</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-
+                    <!-- Pescatarian Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="pescatarian" value="" required>
-                        <label for="pescatarian" class="checkbox-button main-header main-header--checkbox">Pescatarian</label>
+                        <label for="pescatarian" class="checkbox-button checkbox-button--pescatarian main-header main-header--checkbox">Pescatarian</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-
+                    <!-- Vegan Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="vegan" value="" required>
-                        <label for="vegan" class="checkbox-button main-header main-header--checkbox">Vegan</label>
+                        <label for="vegan" class="checkbox-button checkbox-button--vegan main-header main-header--checkbox">Vegan</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-
+                    <!-- Paleo Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="paleo" value="" required>
-                        <label for="paleo" class="checkbox-button main-header main-header--checkbox">Paleo</label>
+                        <label for="paleo" class="checkbox-button checkbox-button--paleo main-header main-header--checkbox">Paleo</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
-                    
                 </div>
+                <!-- Checkbox Container Ends -->
+                <!-- Button Container -->
                 <div class="stage__buttons">
-                    <button type="button" class="button button--main button--form-nav" id="back">Back</button>
-                    <button type="button" class="button button--main button--form-nav" id="next">Next</button>
+                    <!-- Maybe add arrow icons? -->
+                    <button type="button" class="button button--form-nav" id="back">Back</button>
+                    <button type="button" class="button button--form-nav" id="next">Next</button>
                 </div>
-            </fieldset>
-            <fieldset>
-                <legend>
-                    <h2>Let's set some boundaries</h2>
-                    <p>Do you suffer from any food intolerances, allergies, or have anything in particular you really
-                        dont want in your plan?</p>
-                </legend>
-                <div>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
+            </div>
+            <!-- End: Step 2 -->
+            <!-- Start: Step 3 -->
+            <div class="form__stage form__stage--step-three">
+                <!-- Description -->
+                <div class="stage__description">
+                    <h2 class="main-header main-header--margin">Let's set some boundaries</h2>
+                    <p class="main-paragraph main-paragraph--step-one">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan?</p>
                 </div>
-                <div>
-                    <input type="button" value="Back">
-                    <input type="button" value="Next">
+                <!-- Checkbox Container -->
+                <div class="stage__container">
+                    <!-- Dairy Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="dairy" value="" required>
+                        <label for="dairy" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Dairy</label>
+                    </div>
+                    <!-- Shellfish Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="shellfish" value="" required>
+                        <label for="shellfish" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Shellfish</label>
+                    </div>
+                    <!-- Soy Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="soy" value="" required>
+                        <label for="soy" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Soy</label>
+                        
+                    </div>
+                    <!-- Tree Nuts Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="tree-nuts" value="" required>
+                        <label for="tree-nuts" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Tree Nuts</label>
+                        
+                    </div>
+                    <!-- Peanut Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="peanut" value="" required>
+                        <label for="peanut" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Peanut</label>
+                        
+                    </div>
+                    <!-- Sesame Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="sesame" value="" required>
+                        <label for="sesame" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Sesame</label>
+                        
+                    </div>
+                    <!-- Egg Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="egg" value="" required>
+                        <label for="egg" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Egg</label>
+                        
+                    </div>
+                    <!-- Seafood Checkbox -->
+                    <div class="checkbox-pair checkbox-pair--intolerance">
+                        <input type="checkbox" name="intolerance[]" id="seafood" value="" required>
+                        <label for="seafood" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Seafood</label>
+                    </div>
                 </div>
-            </fieldset>
-            <fieldset>
-                <h2>How much food would you like?</h2>
-                <p>Give us a rough idea of how many calories per day you would like us to give you and how much planning you'd like us to do for you.</p>
-                <input type="button"> 
-                <p>Give us a rough idea of how many calories per day you would like us to give you and how much planning
-                    you'd like us to do for you.</p>
-                <input type="button">
-                <div>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
-                    <input type="checkbox">
-                    <label for="">Gluten Free</label>
+                <!-- Checkbox Container Ends -->
+                <!-- Button Container -->
+                <div class="stage__buttons">
+                    <!-- Maybe add arrow icons? -->
+                    <button type="button" class="button button--form-nav" id="back">Back</button>
+                    <button type="button" class="button button--form-nav" id="next">Next</button>
                 </div>
-                <div>
-                    <input type="button" value="Back">
-                    <input type="button" value="Meal Plan time!">
+            </div>
+            <!-- End Step 3 -->
+            <!-- Start Step 4 -->
+            <div class="form__stage form__stage--step-four">
+                <!-- Description -->
+                <div class="stage__description">
+                    <h2 class="main-header main-header--margin">How much food would you like?</h2>
+                    <p class="main-paragraph main-paragraph--step-one">Give us a rough idea of how many calories per day you'd like how just how long you'd like us to plan for. Please choose one of the following:</p>
                 </div>
-            </fieldset>
-        </form>
+                <!-- Checkbox Container -->
+                <div class="stage__container stage__container--step-four">
+                    <!-- Calorie Count Dropdown -->
+                    <select name="daily-calories" class="daily-calories__select" id="calories" placeholder="Daily Caloric Intake"required>
+                        <!-- Placeholder pseudo-select or actualy placeholder value? -->
+                        <option value="null" id="empty-option" disabled selected>Daily Caloric Intake</option>
+                        <option value="1500" id="1500">1,500 Calories</option>
+                        <option value="1750" id="1750">1,750 Calories</option>
+                        <option value="2000" id="2000">2,000 Calories</option>
+                        <option value="2250" id="2250">2,250 Calories</option>
+                        <option value="2500" id="2500">2,500 Calories</option>
+                        <option value="2750" id="2750">2,750 Calories</option>
+                        <option value="3000" id="3000">3,000 Calories</option>
+                        <option value="3250" id="3250">3,250 Calories</option>
+                        <option value="3500" id="3000">3,500 Calories</option>
+                    </select>
+                    <!-- Day Checkbox Description -->
+                    <div class="duration__container">
+                        <div class="radio-pair">
+                            <input type="radio" name="diet-length" id="day" value="" required>
+                            <label for="day"
+                                class="radio-button radio-button--day main-header main-header--radio">Single-Day Plan</label>
+                            <p class="main-paragraph main-paragraph--radio">Strictly exclude gluten, wheat barley and rye.</p>
+                        </div>
+                        <!-- Week Checkbox and Description -->
+                        <div class="radio-pair">
+                            <input type="radio" name="diet-length" id="week" value="" required>
+                            <label for="week"
+                                class="radio-button radio-button--week main-header main-header--radio">Week-Long Plan</label>
+                            <p class="main-paragraph main-paragraph--radio">Strictly exclude gluten, wheat barley and rye.</p>
+                        </div>
+                    </div>
+                <!-- Checkbox Container Ends -->
+                <!-- Button Container -->
+                <div class="stage__buttons">
+                    <!-- Maybe add arrow icons? -->
+                    <button type="button" class="button button--form-nav" id="back">Back</button>
+                    <button type="button" class="button button--form-nav" id="next">Submit</button>
+                </div>
+            </div>
     </main>
-    <section>
+<!-- End: contain the entire multi-step quiz up to the quiz results -->
+    <!-- <section>
         <div>
             <h3>Feast your eyes</h3>
             <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis mollitia saepe laudantium aliquid
@@ -157,11 +232,10 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- JavaScript -->
     <script src="./scripts/scriptscratch.js"></script>
 </body>
-
 </html>

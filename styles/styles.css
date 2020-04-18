@@ -236,9 +236,26 @@ html {
   overflow: hidden;
 }
 
+/* Portrait Tablet and Small Desktops */
+/* Landscape Phone to Portrait Tablet */
+/* Landscape Phones and Down */
+html {
+  font-size: 62.5%;
+  font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
 h2,
 h3 {
-  font-weight: 500;
+  font-weight: 400;
   font-size: 2.4rem;
   letter-spacing: 0.02rem;
   line-height: 1.25;
@@ -263,6 +280,686 @@ img {
   display: block;
 }
 
+.wrapper {
+  max-width: 1680px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #0b69ff;
+  cursor: pointer;
+  color: #fff;
+  width: calc(200px + 6vw);
+  max-width: 340px;
+  height: 60px;
+  font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-size: calc(1.5rem + 0.3vw);
+  font-weight: 500;
+  letter-spacing: 0.065rem;
+  line-height: 1.4;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+@media (min-width: 1680px) {
+  .button {
+    font-size: 2rem;
+  }
+}
+
+.button:hover {
+  background: #0058E3;
+  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms ease;
+  -moz-transition: background-color 250ms ease;
+  -ms-transition: background-color 250ms ease;
+  -o-transition: background-color 250ms ease;
+}
+
+.button:active {
+  background: #0055DC;
+}
+
+.button:focus {
+  border: #B5B7C4 3px solid;
+}
+
+.main-header {
+  font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #171f46;
+  font-size: calc(1.6rem + 1.2vw);
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 1680px) {
+  .main-header {
+    font-size: 3.6rem;
+  }
+}
+
+.main-header--margin {
+  margin-bottom: 24px;
+}
+
+@media (max-width: 1116px) {
+  .main-header--margin {
+    text-align: center;
+  }
+}
+
+.main-header--checkbox,
+.main-header--radio {
+  font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: calc(1.5rem + 0.5vw);
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+}
+
+@media (min-width: 1680px) {
+  .main-header--checkbox,
+  .main-header--radio {
+    font-size: 2.4rem;
+  }
+}
+
+.quiz-section {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.quiz-section__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+}
+
+.form__stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+@media (max-width: 1116px) {
+  .form__stage {
+    padding-top: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .form__stage {
+    padding-top: 60px;
+  }
+}
+
+.form__stage--step-one {
+  text-align: center;
+  height: 260px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 0;
+}
+
+.form__stage--step-two,
+.form__stage--step-three,
+.form__stage--step-four {
+  text-align: left;
+  padding-top: 120px;
+  height: auto;
+  width: 100%;
+  padding-bottom: 60px;
+}
+
+.stage__description {
+  width: 100%;
+  margin-bottom: 63px;
+}
+
+.main-paragraph,
+.daily-calories__select {
+  font-size: calc(1.5rem + 0.3vw);
+  font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  letter-spacing: 0.035rem;
+  line-height: 1.4;
+  font-weight: 400;
+  color: #7e858e;
+  width: 55%;
+}
+
+@media (min-width: 1680px) {
+  .main-paragraph {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .main-paragraph {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-paragraph {
+    width: 100%;
+  }
+}
+
+.main-paragraph--step-one {
+  width: 55%;
+}
+
+@media (max-width: 1116px) {
+  .main-paragraph--step-one {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 560px) {
+  .main-paragraph--step-one {
+    width: 100%;
+  }
+}
+
+.main-paragraph--checkbox,
+.main-paragraph--radio {
+  position: absolute;
+  width: auto;
+  top: 68px;
+  left: 100px;
+  z-index: -1;
+  padding-right: 20px;
+}
+
+@media (max-width: 548px) {
+  .main-paragraph--checkbox,
+  .main-paragraph--radio {
+    top: 54px;
+  }
+}
+
+.stage__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.stage__container--step-four {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.checkbox-pair,
+.radio-pair {
+  width: calc(50% - 40px);
+  min-width: 420px;
+  margin-bottom: 20px;
+  height: 136px;
+  position: relative;
+}
+
+.checkbox-pair:nth-of-type(2n + 1),
+.radio-paid:nth-of-type(2n + 1) {
+  margin-right: 40px;
+}
+
+.checkbox-pair--intolerance {
+  min-width: 220px;
+  width: calc(25% - 50px);
+  margin-right: 50px;
+  margin-bottom: 50px;
+  padding: 14px;
+}
+
+.checkbox-pair--intolerance:nth-of-type(4n) {
+  margin-right: 0;
+}
+
+@media (max-width: 1128px) {
+  .checkbox-pair--intolerance {
+    min-width: auto;
+    width: calc(50% - 30px);
+    margin-right: 30px;
+    margin-bottom: 50px;
+  }
+  .checkbox-pair--intolerance:nth-of-type(even) {
+    margin-right: 0;
+  }
+  .checkbox-pair--intolerance:nth-of-type(n + 7) {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 984px) {
+  .checkbox-pair,
+  .radio-pair {
+    width: 100%;
+    min-width: auto;
+  }
+  .checkbox-pair:nth-of-type(2n + 1),
+  .radio-pair:nth-of-type(2n + 1) {
+    margin-right: 0;
+  }
+  .checkbox-pair--intolerance {
+    width: calc(50% - 30px);
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-pair--intolerance {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-button,
+.radio-button {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  padding-left: 100px;
+  padding-top: 32px;
+}
+
+.checkbox-button:before,
+.checkbox-button:after,
+.radio-button:before,
+.radio-button:after {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.checkbox-button:before,
+.radio-button:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border: 2px solid #d7dfe9;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  transition: all 250ms ease;
+  -webkit-transition: all 250ms ease;
+  -moz-transition: all 250ms ease;
+  -ms-transition: all 250ms ease;
+  -o-transition: all 250ms ease;
+}
+
+.checkbox-button--gluten-free:before {
+  background: url("../assets/gluten-free--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button--ketogenic:before {
+  background: url("../assets/ketogenic--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button--vegetarian:before {
+  background: url("../assets/vegetarian--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button--pescatarian:before {
+  background: url("../assets/pescatarian--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button--vegan:before {
+  background: url("../assets/vegan--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button--paleo:before {
+  background: url("../assets/paleo--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-button:after,
+.radio-button:after {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.checkbox-button:hover:before,
+.radio-button:hover:before {
+  border: 2px solid #acb2ba;
+}
+
+.checkbox-pair:focus-within > .checkbox-button:before,
+.radio-pair:focus-within > .radio-button:before {
+  border: 2px solid #acb2ba;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--gluten-free:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/gluten-free--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--ketogenic:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/ketogenic--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--vegetarian:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/vegetarian--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--pescatarian:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/pescatarian--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--vegan:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/vegan--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.checkbox-pair input[type="checkbox"]:checked + .checkbox-button--paleo:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/paleo--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.stage__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 60px;
+  width: 100%;
+}
+
+@media (max-width: 585px) {
+  .stage__buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .stage__buttons .button--form-nav:first-child {
+    margin-bottom: 20px;
+  }
+  .button--form-nav {
+    max-width: none;
+    width: 100%;
+  }
+}
+
+.checkbox-button--secondary {
+  padding-left: 75px;
+  padding-top: 35px;
+}
+
+.checkbox-button--secondary:hover:before {
+  border: 2px solid #171f46;
+}
+
+.checkbox-button--secondary:before {
+  background: url("../assets/add--no-state.png");
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 24px 34px;
+}
+
+.checkbox-pair--intolerance:focus-within > .checkbox-button--secondary:before {
+  border: 2px solid rgba(126, 133, 142, 0.6);
+}
+
+.checkbox-pair--intolerance input[type="checkbox"]:checked + .checkbox-button--secondary:before {
+  content: '';
+  border: 2px solid #171f46;
+  background: url("../assets/check--selected.png") rgba(215, 223, 233, 0.24);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: 24px 34px;
+}
+
+@media (max-width: 1128px) {
+  .checkbox-button--secondary {
+    padding-top: 37px;
+  }
+}
+
+@media (max-width: 768px) {
+  .checkbox-button--secondary {
+    padding-top: 38px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkbox-button--secondary {
+    padding-left: 75px;
+    padding-top: 40px;
+  }
+}
+
+.duration__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+}
+
+.daily-calories__select {
+  color: #171f46;
+  line-height: 1.4rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 10px 20px;
+  width: 47.2%;
+  min-width: 420px;
+  margin-right: 40px;
+  margin-bottom: 55px;
+  height: 58px;
+  border: 2px solid #7e858e;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  background-image: url("../assets/chevron-down--solid.png");
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  background-size: calc(1.8rem + 0.3vw);
+}
+
+@media (min-width: 1680px) {
+  .daily-calories__select {
+    font-size: 1.8rem;
+    background-size: 1.8rem;
+  }
+}
+
+@media (max-width: 1116px) {
+  .daily-calories__select {
+    width: 100%;
+    min-width: auto;
+    margin-right: 0;
+  }
+}
+
+.radio-button--day:before {
+  background: url("../assets/day--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.radio-button--week:before {
+  background: url("../assets/week--no-state.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.radio-pair input[type="radio"]:checked + .radio-button--day:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/day--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+.radio-pair input[type="radio"]:checked + .radio-button--week:before {
+  content: '';
+  border: 2px solid #acb2ba;
+  background: url("../assets/week--selected.png");
+  background-size: 60px;
+  background-repeat: no-repeat;
+  background-position: 22px 33px;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #0b69ff;
+  font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
 fieldset {
   border: none;
   padding: 0;
@@ -280,7 +977,7 @@ fieldset {
   color: #fff;
   width: 340px;
   height: 60px;
-  font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
@@ -311,213 +1008,11 @@ fieldset {
 }
 
 .main-header--checkbox {
-  font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
   letter-spacing: 0.05rem;
   line-height: 1.4;
-}
-
-.quiz-section {
-  height: 100vh;
-}
-
-.quiz-section__form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  height: 100%;
-}
-
-.form__stage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.form__stage--center-align {
-  text-align: center;
-  width: 50%;
-  height: 260px;
-}
-
-.form__stage--left-align {
-  text-align: left;
-}
-
-.main-paragraph--left-align {
-  width: 60%;
-}
-
-.stage__description {
-  margin-bottom: 60px;
-}
-
-.main-paragraph {
-  font-size: 2rem;
-  letter-spacing: 0.035rem;
-  line-height: 1.4;
-  color: #7e858e;
-}
-
-.main-paragraph--checkbox {
-  position: absolute;
-  top: 70px;
-  left: 100px;
-  z-index: -1;
-}
-
-.stage__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 100%;
-  height: 100%;
-}
-
-.checkbox-pair {
-  width: 48%;
-  height: 136px;
-  margin-bottom: 2%;
-  position: relative;
-}
-
-input[type="checkbox"] {
-  opacity: 0;
-  position: absolute;
-}
-
-.checkbox-button {
-  position: relative;
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  padding-left: 100px;
-  padding-top: 30px;
-}
-
-.checkbox-button:before,
-.checkbox-button:after {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-}
-
-.checkbox-button:before {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  border: 2px solid #d7dfe9;
-  background: url("../assets/icon-placeholder.png");
-  background-size: 60px;
-  background-repeat: no-repeat;
-  background-position: 22px 33px;
-  cursor: pointer;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-}
-
-.checkbox-button:after {
-  content: '';
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  cursor: pointer;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  -moz-border-radius: 6px;
-  -ms-border-radius: 6px;
-  -o-border-radius: 6px;
-  transition: background-color 250ms ease;
-  -webkit-transition: background-color 250ms ease;
-  -moz-transition: background-color 250ms ease;
-  -ms-transition: background-color 250ms ease;
-  -o-transition: background-color 250ms ease;
-}
-
-.checkbox-button:hover:after {
-  background: rgba(215, 223, 233, 0.4);
-}
-
-.checkbox-pair input[type="checkbox"]:checked + .checkbox-button:after {
-  content: '';
-  background: rgba(215, 223, 233, 0.4);
-  height: 100%;
-  width: 100%;
-}
-
-.stage__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-top: 60px;
-  width: 100%;
-}
-
-.button--form-nav {
-  width: 240px;
-  height: 60px;
-  font-size: 1.8rem;
-}
-
-html {
-  font-size: 62.5%;
-  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-h2,
-h3 {
-  font-weight: 500;
-  font-size: 2.4rem;
-  letter-spacing: 0.02rem;
-  line-height: 1.25;
-}
-
-a {
-  text-decoration: none;
-  color: #0b69ff;
-  font-weight: 700;
 }
 
 .food-cards {
@@ -550,11 +1045,10 @@ a {
           justify-content: center;
 }
 
-.food-card-image img {
+.food-card__image img {
   border-radius: 7px 7px 0 0;
-  width: 100%;
 }
 
-.food-card-text {
+.food-card__text {
   margin: 22px;
 }
