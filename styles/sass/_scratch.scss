@@ -3,103 +3,103 @@
 // Body Grey: #7e858e
 // Border Grey: #d7dfe9
 
-html {
-    font-size: 62.5%;
-    font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
+// html {
+//     font-size: 62.5%;
+//     font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+// }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    margin: 0;
-}
+// h1,
+// h2,
+// h3,
+// h4,
+// h5,
+// h6 {
+//     margin: 0;
+// }
 
-h2,
-h3 {
-    font-weight: 500;
-    font-size: 2.4rem;
-    letter-spacing: 0.02rem;
-    line-height: 1.25;
-}
+// h2,
+// h3 {
+//     font-weight: 500;
+//     font-size: 2.4rem;
+//     letter-spacing: 0.02rem;
+//     line-height: 1.25;
+// }
 
-p {
-    margin: 0;
-    // border: 1px solid red;
-}
+// p {
+//     margin: 0;
+//     // border: 1px solid red;
+// }
 
-a {
-    text-decoration: none;
-}
+// a {
+//     text-decoration: none;
+// }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
+// ul {
+//     list-style: none;
+//     padding: 0;
+//     margin: 0;
+// }
 
-img {
-    max-width: 100%;
-    display: block;
-}
+// img {
+//     max-width: 100%;
+//     display: block;
+// }
 
-fieldset {
-    border: none;
-    padding: 0;
-}
+// fieldset {
+//     border: none;
+//     padding: 0;
+// }
 
-.wrapper {
-    max-width: 1680px;
-    width: 90%;
-    margin: 0 auto;
-}
+// .wrapper {
+//     max-width: 1680px;
+//     width: 90%;
+//     margin: 0 auto;
+// }
 
-.button {
-    background-color: #0b69ff;
-    cursor: pointer;
-    color: #fff;
-    width: 340px;
-    height: 60px;
-    font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 2rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    line-height: 1.4;
-    border: none;
-    border-radius: 6px;
-    -webkit-border-radius: 6px;
-    -moz-border-radius: 6px;
-    -ms-border-radius: 6px;
-    -o-border-radius: 6px;
-}
+// .button {
+//     background-color: #0b69ff;
+//     cursor: pointer;
+//     color: #fff;
+//     width: 340px;
+//     height: 60px;
+//     font-family: $font-family;
+//     font-size: 2rem;
+//     font-weight: 600;
+//     letter-spacing: 0.05rem;
+//     line-height: 1.4;
+//     border: none;
+//     border-radius: 6px;
+//     -webkit-border-radius: 6px;
+//     -moz-border-radius: 6px;
+//     -ms-border-radius: 6px;
+//     -o-border-radius: 6px;
+// }
 
-.button:hover {
-    background: #0058E3;
-    transition: background-color 250ms ease;
-    -webkit-transition: background-color 250ms ease;
-    -moz-transition: background-color 250ms ease;
-    -ms-transition: background-color 250ms ease;
-    -o-transition: background-color 250ms ease;
-}
+// .button:hover {
+//     background: #0058E3;
+//     transition: background-color 250ms ease;
+//     -webkit-transition: background-color 250ms ease;
+//     -moz-transition: background-color 250ms ease;
+//     -ms-transition: background-color 250ms ease;
+//     -o-transition: background-color 250ms ease;
+// }
 
-.main-header {
-    // border: solid 1px red;
-    color: #171f46;
-    font-size: 3.6rem;
-    font-weight: 400;
-    letter-spacing: 0.02rem;
-    line-height: 1.25;
-}
+// .main-header {
+//     // border: solid 1px red;
+//     color: #171f46;
+//     font-size: 3.6rem;
+//     font-weight: 400;
+//     letter-spacing: $letter-spacing--small;
+//     line-height: 1.25;
+// }
 
-.main-header--checkbox {
-    font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-    font-size: 2.4rem;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    line-height: 1.4;
-}
+// .main-header--checkbox {
+//     font-family: $font-family;
+//     font-size: 2.4rem;
+//     font-weight: 600;
+//     letter-spacing: $letter-spacing--large;
+//     line-height: 1.4;
+// }
 
 
 .quiz-section {
@@ -142,7 +142,7 @@ fieldset {
 
 .main-paragraph {
     font-size: 2rem;
-    letter-spacing: 0.035rem;
+    letter-spacing: $letter-spacing--med;
     line-height: 1.4;
     color: #7e858e;
 }

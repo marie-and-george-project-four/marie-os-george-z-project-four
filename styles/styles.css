@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-=======
 @charset "UTF-8";
->>>>>>> master
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -239,21 +236,6 @@ html {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-html {
-  font-size: 62.5%;
-  font-family: 'Inter', Arial, 'Helvetica Neue', Helvetica, sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
 h2,
 h3 {
   font-weight: 500;
@@ -263,19 +245,11 @@ h3 {
 }
 
 p {
-=======
-* {
-  font-family: sans-serif;
-}
-
-h4 {
->>>>>>> master
   margin: 0;
 }
 
 a {
   text-decoration: none;
-<<<<<<< HEAD
 }
 
 ul {
@@ -349,30 +323,6 @@ fieldset {
 }
 
 .quiz-section__form {
-=======
-  color: blue;
-  font-weight: 700;
-}
-
-.food-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 auto;
-}
-
-.food-cards a::after {
-  content: "→";
-  padding-left: 8px;
-}
-
-.food-card {
-  max-width: 302px;
-  width: 33vw;
-  border-radius: 8px;
-  border: 1px solid #878ab3;
-  margin: 10px;
->>>>>>> master
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -383,7 +333,6 @@ fieldset {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-<<<<<<< HEAD
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -541,7 +490,64 @@ input[type="checkbox"] {
   width: 240px;
   height: 60px;
   font-size: 1.8rem;
-=======
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
+}
+
+a {
+  text-decoration: none;
+  color: #0b69ff;
+  font-weight: 700;
+}
+
+.food-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.food-cards a::after {
+  content: "→";
+  padding-left: 8px;
+}
+
+.food-card {
+  max-width: 302px;
+  width: 33vw;
+  border-radius: 8px;
+  border: 1px solid #d7dfe9;
+  margin: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .food-card-image img {
@@ -551,5 +557,4 @@ input[type="checkbox"] {
 
 .food-card-text {
   margin: 22px;
->>>>>>> master
 }
