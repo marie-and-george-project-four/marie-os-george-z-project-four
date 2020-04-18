@@ -4,7 +4,6 @@ const mealApp = {}
 //api key 
 mealApp.key = '92f2d36d20f24e3a9ab1a885dbd56fc4'
 
-const week = []
 
 //ajax request 
 mealApp.getMeals = () => {
@@ -29,6 +28,8 @@ mealApp.getMeals = () => {
                 // console.log(y, 'y')
             }
             console.log(`${dayy}: ${oneweek[dayy]}`);
+                    mealApp.displayMeals(meals);
+
         }
 
 
@@ -37,9 +38,8 @@ mealApp.getMeals = () => {
 //for each can be written for each day of the week
 
     //     //one day
-    //     console.log(meals.week.monday, 'mondayday' );
+        // console.log(meals.week.monday, 'mondayday' );
 
-        mealApp.displayMeals(meals)
     })
 }
 
@@ -78,9 +78,10 @@ mealApp.getMeals = () => {
     //selected mealplan is saved in a variable 
         // title, link, image pulled from API & appended to dom
         // all the variables collected are inputed into an AJAX request 
-mealApp.displayMeals = (meals, JQXHR_obj) => {
+mealApp.displayMeals = (mealsData) => {
+    console.log(mealsData, 'mealsData');
         // respons and status code
-    console.log(JQXHR_obj.status) // <= 400 ERROR else Success
+    // console.log(JQXHR_obj.status) // <= 400 ERROR else Success
         // if response status code is higher than 399
         //diet
 
@@ -103,11 +104,12 @@ mealApp.displayMeals = (meals, JQXHR_obj) => {
 
 mealApp.init = function() {
     console.log('gitinit');
+    mealApp.getMeals()
+
 }
 
 $(function(){
     mealApp.init()
-    mealApp.getMeals()
 });
 
 
