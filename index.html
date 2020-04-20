@@ -33,38 +33,39 @@
                 <!-- Checkbox Container -->
                 <div class="stage__container">
                     <!-- Gluten Free Checkbox and Description -->
+                    <!-- the value given to all of these checkboxes is in camel case. This is on purpose because they are passed as perameters to an AJAX call -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="gluten-free" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="gluten-free" value="glutenFree" required>
                         <label for="gluten-free" class="checkbox-button checkbox-button--gluten-free main-header main-header--checkbox">Gluten Free</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
                     <!-- Ketogenic Checkbox and Description -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="ketogenic" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="ketogenic" value="ketogenic" required>
                         <label for="ketogenic" class="checkbox-button checkbox-button--ketogenic main-header main-header--checkbox">Ketogenic</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
                     <!-- Vegetarian Checkbox and Description -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="vegetarian" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="vegetarian" value="vegetarian" required>
                         <label for="vegetarian" class="checkbox-button checkbox-button--vegetarian main-header main-header--checkbox">Vegetarian</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
                     <!-- Pescatarian Checkbox and Description -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="pescatarian" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="pescatarian" value="pescatarian" required>
                         <label for="pescatarian" class="checkbox-button checkbox-button--pescatarian main-header main-header--checkbox">Pescatarian</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
                     <!-- Vegan Checkbox and Description -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="vegan" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="vegan" value="vegan" required>
                         <label for="vegan" class="checkbox-button checkbox-button--vegan main-header main-header--checkbox">Vegan</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
                     <!-- Paleo Checkbox and Description -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="paleo" value="" required>
+                        <input type="checkbox" name="diet-style[]" id="paleo" value="paleo" required>
                         <label for="paleo" class="checkbox-button checkbox-button--paleo main-header main-header--checkbox">Paleo</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
@@ -86,50 +87,51 @@
                     <p class="main-paragraph main-paragraph--quiz">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan?</p>
                 </div>
                 <!-- Checkbox Container -->
+                <!-- the value given to some of these checkboxes is in camel case. This is on purpose because they are passed as perameters to an AJAX call -->
                 <div class="stage__container">
                     <!-- Dairy Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="dairy" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="dairy" value="dairy" required>
                         <label for="dairy" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Dairy</label>
                     </div>
                     <!-- Shellfish Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="shellfish" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="shellfish" value="shellfish" required>
                         <label for="shellfish" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Shellfish</label>
                     </div>
                     <!-- Soy Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="soy" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="soy" value="soy" required>
                         <label for="soy" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Soy</label>
                         
                     </div>
                     <!-- Tree Nuts Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="tree-nuts" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="tree-nuts" value="treeNuts" required>
                         <label for="tree-nuts" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Tree Nuts</label>
                         
                     </div>
                     <!-- Peanut Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="peanut" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="peanut" value="peanut" required>
                         <label for="peanut" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Peanut</label>
                         
                     </div>
                     <!-- Sesame Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="sesame" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="sesame" value="sesame" required>
                         <label for="sesame" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Sesame</label>
                         
                     </div>
                     <!-- Egg Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="egg" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="egg" value="egg" required>
                         <label for="egg" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Egg</label>
                         
                     </div>
                     <!-- Seafood Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="seafood" value="" required>
+                        <input type="checkbox" name="intolerance[]" id="seafood" value="seafood" required>
                         <label for="seafood" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Seafood</label>
                     </div>
                 </div>
@@ -168,14 +170,14 @@
                     <!-- Day Checkbox Description -->
                     <div class="duration__container">
                         <div class="radio-pair">
-                            <input type="radio" name="diet-length" id="day" value="" required>
+                            <input type="radio" name="diet-length" id="day" value="day" required>
                             <label for="day"
                                 class="radio-button radio-button--day main-header main-header--radio">Single-Day Plan</label>
                             <p class="main-paragraph main-paragraph--radio">Strictly exclude gluten, wheat barley and rye.</p>
                         </div>
                         <!-- Week Checkbox and Description -->
                         <div class="radio-pair">
-                            <input type="radio" name="diet-length" id="week" value="" required>
+                            <input type="radio" name="diet-length" id="week" value="week" required>
                             <label for="week"
                                 class="radio-button radio-button--week main-header main-header--radio">Week-Long Plan</label>
                             <p class="main-paragraph main-paragraph--radio">Strictly exclude gluten, wheat barley and rye.</p>
@@ -186,7 +188,7 @@
                 <div class="stage__buttons">
                     <!-- Maybe add arrow icons? -->
                     <button type="button" class="button button--form-nav" id="back">Back</button>
-                    <button type="button" class="button button--form-nav" id="next">Submit</button>
+                    <button type="button" class="button button--form-nav submit" id="next">Submit</button>
                 </div>
             </div>
             <div class="bla"></div>
