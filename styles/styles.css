@@ -1183,18 +1183,102 @@ input[type="radio"] {
   }
 }
 
-* {
-  font-family: sans-serif;
+html {
+  font-size: 62.5%;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
-h4 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
+}
+
+p {
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  color: blue;
+  color: #0b69ff;
   font-weight: 700;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+}
+
+.wrapper {
+  max-width: 1680px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.button {
+  background-color: #0b69ff;
+  cursor: pointer;
+  color: #fff;
+  width: 340px;
+  height: 60px;
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  border: none;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+}
+
+.button:hover {
+  background: #0058E3;
+  transition: background-color 250ms ease;
+  -webkit-transition: background-color 250ms ease;
+  -moz-transition: background-color 250ms ease;
+  -ms-transition: background-color 250ms ease;
+  -o-transition: background-color 250ms ease;
+}
+
+.main-header {
+  color: #171f46;
+  font-size: 3.6rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  line-height: 1.25;
+}
+
+.main-header--checkbox {
+  font-family: "Inter", Arial, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
 }
 
 .food-cards {
@@ -1213,7 +1297,7 @@ a {
   max-width: 302px;
   width: 33vw;
   border-radius: 8px;
-  border: 1px solid #878ab3;
+  border: 1px solid #d7dfe9;
   margin: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1227,11 +1311,10 @@ a {
           justify-content: center;
 }
 
-.food-card-image img {
+.food-card__image img {
   border-radius: 7px 7px 0 0;
-  width: 100%;
 }
 
-.food-card-text {
+.food-card__text {
   margin: 22px;
 }
