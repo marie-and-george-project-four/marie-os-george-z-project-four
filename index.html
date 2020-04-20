@@ -28,7 +28,7 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">Let's narrow things down a bit</h2>
-                    <p class="main-paragraph main-paragraph--step-one">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
+                    <p class="main-paragraph main-paragraph--quiz">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
                 </div>
                 <!-- Checkbox Container -->
                 <div class="stage__container">
@@ -83,7 +83,7 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">Let's set some boundaries</h2>
-                    <p class="main-paragraph main-paragraph--step-one">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan?</p>
+                    <p class="main-paragraph main-paragraph--quiz">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan?</p>
                 </div>
                 <!-- Checkbox Container -->
                 <div class="stage__container">
@@ -147,14 +147,14 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">How much food would you like?</h2>
-                    <p class="main-paragraph main-paragraph--step-one">Give us a rough idea of how many calories per day you'd like how just how long you'd like us to plan for. Please choose one of the following:</p>
+                    <p class="main-paragraph main-paragraph--quiz">Give us a rough idea of how many calories per day you'd like how just how long you'd like us to plan for. Please choose one of the following:</p>
                 </div>
                 <!-- Checkbox Container -->
                 <div class="stage__container stage__container--step-four">
                     <!-- Calorie Count Dropdown -->
                     <select name="daily-calories" class="daily-calories__select" id="calories" placeholder="Daily Caloric Intake"required>
                         <!-- Placeholder pseudo-select or actualy placeholder value? -->
-                        <option value="null" id="empty-option" disabled selected>Daily Caloric Intake</option>
+                        <option selected disabled>Daily Caloric Intake</option>
                         <option value="1500" id="1500">1,500 Calories</option>
                         <option value="1750" id="1750">1,750 Calories</option>
                         <option value="2000" id="2000">2,000 Calories</option>
@@ -190,50 +190,77 @@
                 </div>
             </div>
     </main>
-<!-- End: contain the entire multi-step quiz up to the quiz results -->
-    <!-- <section>
-        <div>
-            <h3>Feast your eyes</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perferendis mollitia saepe laudantium aliquid
-                dignissimos quis esse, porro impedit nesciunt libero.</p>
-            <ul>
-                <li>Ketogenic</li>
-                <li></li>
-                <li></li>
+    <!-- End: contain the entire multi-step quiz up to the quiz results -->
+    <!-- Start: Results of the quiz -->
+    <section class="results-section wrapper">
+        <!-- Section Description -->
+        <div class="stage__description stage__description--results">
+            <h2 class="main-header main-header--margin">Feast your eyes</h2>
+            <!-- Add in data covering the calories and duration -->
+            <p class="main-paragraph main-paragraph--quiz">The robots are back with your meal plan, check out your options below.</p>
+        </div>
+        <!-- Results Container -->
+        <div class="results-section__container">
+            <!-- Tags of the Quiz Filters -->
+            <ul class="results-section__filter">
+                <li class="filter__active filter__active--gluten-free">Gluten Free</li>
+                <li class="filter__active filter__active--ketogenic">Ketogenic</li>
+                <li class="filter__active filter__active--vegetarian">Vegetarian</li>
+                <li class="filter__active filter__active--pescatarian">Pescatarian</li>
+                <li class="filter__active filter__active--vegan">Vegan</li>
+                <li class="filter__active filter__active--paleo">Paleo</l1>
+                <li class="filter__active filter__active--dairy">Dairy-Free</l1>
+                <li class="filter__active filter__active--shellfish">Shellfish-Free</l1>
+                <li class="filter__active filter__active--soy">Soy-Free</l1>
+                <li class="filter__active filter__active--tree-nuts">Tree Nuts-Free</l1>
+                <li class="filter__active filter__active--peanut">Peanut-Free</l1>
+                <li class="filter__active filter__active--sesame">Sesame-Free</l1>
+                <li class="filter__active filter__active--egg">Egg-Free</l1>
+                <li class="filter__active filter__active--seafood">Seafood-Free</li>
             </ul>
-                <div class="food-card">
-                    <div class="food-card-image">
-                        <img src="http://placegoat.com/300/250" alt="">
+            <!-- Tags of Quiz Filters -->
+            <!-- Recipe Results -->
+            <div class="results-section__recipes">
+                <!-- Recipe Card -->
+                <div class="recipes__recipe-card">
+                    <div class="recipe-card__image">
+                        <img src="http://placegoat.com/1200/1200" alt="">
                     </div>
-                    <div class="food-card-text">
-                        <h4>Food title</h4>
-                        <p>this what the food is</p>
-                        <a href="">go here for food</a>
+                    <div class="recipe-card__description">
+                        <h3 class="main-header main-header--recipe">Food title</h3>
+                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias, consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
+                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card-image">
-                        <img src="http://placegoat.com/300/250" alt="">
+                </div>              
+                <div class="recipes__recipe-card">
+                    <div class="recipe-card__image">
+                        <img src="http://placegoat.com/1200/1200" alt="">
                     </div>
-                    <div class="food-card-text">
-                        <h4>Food title</h4>
-                        <p>this what the food is</p>
-                        <a href="">go here for food</a>
+                    <div class="recipe-card__description">
+                        <h3 class="main-header main-header--recipe">Food title</h3>
+                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias, consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
+                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
                     </div>
-                </div>
-                <div class="food-card">
-                    <div class="food-card-image">
-                        <img src="http://placegoat.com/300/250" alt="">
+                </div>                
+                <div class="recipes__recipe-card">
+                    <div class="recipe-card__image">
+                        <img src="http://placegoat.com/1200/1200" alt="">
                     </div>
-                    <div class="food-card-text">
-                        <h4>Food title</h4>
-                        <p>this what the food is</p>
-                        <a href="">go here for food</a>
+                    <div class="recipe-card__description">
+                        <h3 class="main-header main-header--recipe">Food title</h3>
+                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias,
+                        consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem
+                        aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
+                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section> -->
+            <div class="stage__buttons stage__buttons--results-section">
+                <button type="button" class="button button--start-over" id="start-over">Start Over</button>
+            </div>
+        </div> 
+    </section>
+    <!-- End: Results of quiz -->
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- JavaScript -->
