@@ -7,20 +7,29 @@
 // Border Grey: #d7dfe9
 // Border Grey Hover: #acb2ba
 
+// Accessibility Checklist
+
+// GF Contrast Ratio
+// Keto Contrast Ratio
+// Pescatarian Contrast Ratio
+// Dairy Contrast Ratio
+// Shellfish Contrast Ratio
+// Soy Contrast Ratio
+// Peanut Constrast Ratio
+// Sesame Contrast Ratio
+
+// Links open to new tab
+
+// Percentage-Based Padding/Margin where relevant
+// Compress PNGs
+// Replace the external link after elements with unicode and make the font-family: FontAwesome, etc. – link the font in the head
 
 // Add :valid and :invalid styling to inputs
-// Add min and maxlength
 // Make sure everything has a :focus state
-
-// Media Queries
-/* Portrait Tablet and Small Desktops */
-// @media (max-width: 940px)
-
-/* Landscape Phone to Portrait Tablet */
-// @media (max-width: 768px)
-
-/* Landscape Phones and Down */
-// @media (max-width: 480px)
+// Submit answers on 'enter' key
+// Transition changes?
+// Convert divs to lists
+// Add more to hover state of recipe cards
 
 
 
@@ -49,7 +58,6 @@ h3 {
 
 p {
     margin: 0;
-    // border: 1px solid red; Any instance of this is just as guide for me while building, take em out!
 }
 
 a {
@@ -71,7 +79,6 @@ img {
     max-width: 1680px;
     width: 90%;
     margin: 0 auto;
-    // border: 1px solid red;
 }
 
 .button {
@@ -118,7 +125,6 @@ img {
 }
 
 .main-header {
-    // border: solid 1px red;
     font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;    
     color: #171f46;
     font-size: calc(1.6rem + 1.2vw);
@@ -144,12 +150,17 @@ img {
 }
 
 .main-header--checkbox,
-.main-header--radio {
+.main-header--radio,
+.main-header--recipe {
     font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
     font-weight: 500;
     font-size: calc(1.5rem + 0.5vw);
     letter-spacing: 0.05rem;
     line-height: 1.4;
+}
+
+.main-header--recipe {
+    margin-bottom: 20px;
 }
 
 @media (min-width: 1680px) {
@@ -159,9 +170,34 @@ img {
     }
 }
 
+.results-section {
+    // height: 100vh;
+    padding-top: 120px;
+    padding-bottom: 4%;
+}
+
+@media (max-width: 888px) {
+    .results-section {
+    padding-bottom: 8%;
+    }
+}
+
 .quiz-section {
-    height: 100vh;
+    // height: 100vh;
     display: flex;
+}
+
+.results-section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: auto;
+    text-align: left;
+    height: auto;
+    width: 100%;
+    // padding-bottom: 60px;
+    // height: 100%;
 }
 
 .quiz-section__form {
@@ -170,14 +206,12 @@ img {
     justify-content: center;
     align-items: center;
     margin: auto;
-
 }
 
 .form__stage {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // border: 1px solid red;
     height: 100%;
     // Get rid of later
     // width: 100%;
@@ -217,7 +251,10 @@ img {
 .stage__description {
     width: 100%;
     margin-bottom: 63px;
-    // border: 1px solid red;
+}
+
+.stage__description--results {
+    margin-bottom: 33px;
 }
 
 .main-paragraph,
@@ -230,7 +267,6 @@ img {
     font-weight: 400;
     color: #7e858e;
     width: 55%;
-    // border: 1px solid red;
 }
 
 @media (min-width: 1680px) {
@@ -251,12 +287,8 @@ img {
     }
 }
 
-.main-paragraph--step-one {
-    width: 55%;
-}
-
 @media (max-width: 1116px) {
-    .main-paragraph--step-one {
+    .main-paragraph--quiz {
         width: 80%;
         margin: 0 auto;
         text-align: center;
@@ -264,7 +296,7 @@ img {
 }
 
 @media (max-width: 560px) {
-    .main-paragraph--step-one {
+    .main-paragraph--quiz {
         width: 100%;
     }
 }
@@ -291,10 +323,8 @@ img {
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    // border: 1px solid red;
     // Get rid of height
     // height: 100%;
-
     // Get rid of after
     width: 100%;
 }
@@ -310,7 +340,6 @@ img {
     margin-bottom: 20px;
     height: 136px;
     position: relative;
-    // border: 1px solid red;
 }
 
 .checkbox-pair:nth-of-type(2n + 1),
@@ -366,9 +395,10 @@ img {
 }
 
 @media (max-width: 768px) {
-    .checkbox-pair--intolerance {
+    .checkbox-pair--intolerance,
+    .checkbox-pair--intolerance:nth-of-type(n + 7) {
         width: 100%;
-        margin-bottom: 20px;
+        margin-bottom: -8px;
     }
 }
 
@@ -541,7 +571,6 @@ input[type="radio"] {
     display: flex;
     justify-content: space-between;
     margin-top: 60px;
-    // border: 1px solid red;
     width: 100%;
 }
 
@@ -613,7 +642,6 @@ input[type="radio"] {
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: center;
-    // border: 1px solid red;
     // Get rid of height
     // height: 100%;
 
@@ -639,7 +667,7 @@ input[type="radio"] {
     -webkit-border-radius: 3px;
     background-image: url('../assets/chevron-down--solid.png');
     background-repeat: no-repeat;
-    background-position: 95% center;
+    background-position: 96% center;
     background-size: calc(1.8rem + 0.3vw);
 }
 
@@ -689,6 +717,239 @@ input[type="radio"] {
     background-repeat: no-repeat;
     background-position: 22px 33px;
 }
+
+.results-section__filter {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    // height: 100px;
+}
+
+.filter__active {
+    font-size: calc(0.8rem + 0.12vw);
+    width: calc(100px + 1.15vw);
+    font-family: 'Rubik', Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    font-weight: 500;
+    color: #fff;
+    height: 28px;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 2.65rem;
+    letter-spacing: 0.04rem;
+    text-transform: uppercase;
+    border-radius: 20%/70%;
+    -webkit-border-radius: 20%/100%;
+    -moz-border-radius: 20%/70%;
+    -ms-border-radius: 20%/70%;
+    -o-border-radius: 20%/70%;
+}
+
+@media (min-width: 1680px) {
+    .filter__active {
+        font-size: 1rem;
+        width: 120px;
+    }
+}
+
+.filter__active--gluten-free {
+    background-color: #00b2caff;
+}
+
+.filter__active--ketogenic {
+    background-color: #ca9f00ff;
+}
+
+.filter__active--vegetarian {
+    background-color: #4d00caff;
+}
+
+.filter__active--pescatarian {
+    background-color: #d98304ff;
+}
+
+.filter__active--vegan {
+    background-color: #0051caff;
+}
+
+.filter__active--paleo {
+    background-color: #f13838ff;
+}
+
+.filter__active--dairy {
+    background-color: #d7fcd4ff;
+}
+
+.filter__active--shellfish {
+    background-color: #fcf300ff;
+}
+
+.filter__active--soy {
+    background-color: #44af69ff;
+}
+
+.filter__active--tree-nuts {
+    background-color: #26547cff;
+}
+
+.filter__active--peanut {
+    background-color: #b9d6f2ff;
+}
+
+.filter__active--sesame {
+    background-color: #06d6a0ff;
+}
+
+.filter__active--egg {
+    background-color: #36494eff;
+}
+
+.filter__active--seafood {
+    background-color: #f72585ff;
+}
+
+.results-section__recipes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    // align-content: stretch;
+    width: 100%;
+    padding-top: 60px;
+}
+
+.recipes__recipe-card {
+    width: calc(100% / 3.5);
+    min-width: 368px;
+    border: 2px solid #d7dfe9;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    //height: 400px;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+}
+
+.results-section__recipes .recipes__recipe-card:nth-child(3) {
+    margin-right: 0px;
+}
+
+.recipes__recipe-card:hover {
+    border: 2px solid #acb2ba;
+    transform: translateY(-2px);
+    -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    -ms-transform: translateY(-2px);
+    -o-transform: translateY(-2px);
+    box-shadow: 0px 0px 40px 0px rgba(172, 178, 186, 0.3);
+}
+
+@media (max-width: 1364px) {
+    .results-section__recipes {
+        justify-content: flex-start;
+    }
+
+
+    .recipes__recipe-card {
+        width: calc(50% - 30px);
+    }
+
+    .results-section__recipes .recipes__recipe-card:nth-child(even) {
+        margin-right: 0;
+    }
+
+}
+
+@media (max-width: 888px) {
+    .results-section__recipes {
+        justify-content: flex-start;
+    }
+
+
+    .recipes__recipe-card {
+        width: 100%;
+    }
+
+    .recipes__recipe-card {
+        margin-right: 0;
+    }
+
+    .results-section__recipes .recipes__recipe-card:nth-last-child(1) {
+        margin-bottom: 0px;
+    }
+
+}
+
+.recipe-card__image img {
+    border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px 8px 0 0;
+    -moz-border-radius: 8px 8px 0 0;
+    -ms-border-radius: 8px 8px 0 0;
+    -o-border-radius: 8px 8px 0 0;
+    object-fit: cover;
+}
+
+.recipe-card__description {
+    padding: 10%;
+    // padding: 40px;
+}
+
+.main-paragraph--recipe {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.main-paragraph--external-link {
+    width: auto;
+    color: #0b69ff;
+    position: relative;
+    transition: all 250ms ease;
+    -webkit-transition: all 250ms ease;
+    -moz-transition: all 250ms ease;
+    -ms-transition: all 250ms ease;
+    -o-transition: all 250ms ease;
+}
+
+.main-paragraph--external-link:hover {
+    color: #0058E3;
+}
+
+.main-paragraph--external-link:active {
+    color: #0055DC;
+}
+
+
+.main-paragraph--external-link:after {
+    content: '';
+    position: absolute;
+    bottom: 4px;
+    right: -25px;
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+    background: url('../assets/external-link--no-state.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.stage__buttons--results-section {
+    justify-content: flex-end;
+}
+
+@media (max-width: 888px) {
+    .button--start-over {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+
 
 
 

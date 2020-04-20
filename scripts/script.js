@@ -7,13 +7,13 @@ mealApp.key = '92f2d36d20f24e3a9ab1a885dbd56fc4'
 
 //ajax request 
 mealApp.getMeals = () => {
-    $.ajax({
-        url: 'https://api.spoonacular.com/mealplanner/generate',
-        method: 'GET',
-        dataType: 'json',
-        data: {
-            apiKey: mealApp.key,
-        }
+    // $.ajax({
+    //     url: 'https://api.spoonacular.com/mealplanner/generate',
+    //     method: 'GET',
+    //     dataType: 'json',
+    //     data: {
+    //         apiKey: mealApp.key,
+    //     }
     }).then((meals) => {
         // STATUS_TEST, JQXHR_obj might be our ticket to detecting and ejecting urls that dont work. 
 
