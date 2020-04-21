@@ -4,9 +4,44 @@ const mealApp = {}
 //api key 
 mealApp.key = 'cacba147c38b4f0faff0ce178c6edd1f'
 
+// here
+// const $cachedButton = $('#button');
+// $cachedButton.on('click', function(){
+//         const $currentFormStage = $(this).parent();
+//         const $nextFormStage = $(this).parent().next();
+//         $nextFormStage.show();
+//         $currentFormStage.hide();
 
-
-
+mealApp.quizNavigation = () => {
+    $('#get-started').on('click', function(){
+        const $currentFormStage = $(this).parent();
+        const $nextFormStage = $(this).parent().next();
+        $nextFormStage.show();
+        $currentFormStage.hide();
+    });
+    $('.back').on('click', function(){
+        const $currentFormStage = $(this).parents('.form__stage');
+        const $prevFormStage = $(this).parents('.form__stage').prev();
+        $prevFormStage.show();
+        $currentFormStage.hide();
+    });
+    $('.next').on('click', function(){
+        const $currentFormStage = $(this).parents('.form__stage');
+        const $nextFormStage = $(this).parents('.form__stage').next();
+        $nextFormStage.show();
+        $currentFormStage.hide();
+    });
+    $(".daily-calories__select").on('change', function () {
+      $(".duration__container").css("visibility", "visible");
+    });
+    $(".submit").on("click", function () {
+      const $currentFormStage = $(this).parents(".quiz-section");
+      const $nextFormStage = $(this).parents(".quiz-section").next();
+      $nextFormStage.show();
+      $currentFormStage.hide();
+    });
+ 
+}
 
 
 
@@ -38,25 +73,25 @@ mealApp.getUserInfo = (userDiet, intolerances, calories, duration) => {
 
 
 // //ajax request catches user input and generates meal plan with user selections
-// mealApp.getMeals = (userDiet, intolerances, calories, duration) => {
-//     $.ajax({
-//         url: 'https://api.spoonacular.com/mealplanner/generate',
-//         method: 'GET',
-//         dataType: 'json',
-//         data: {
-//             apiKey: mealApp.key,
-//             diet: userDiet.toString(),
-//             exclude: intolerances.toString(),
-//             targetCalories: calories,
-//             timeFrame: duration,
-//         }
-//     }).then((meals) => {
-//         console.log(meals)
+mealApp.getMeals = (userDiet, intolerances, calories, duration) => {
+    $.ajax({
+        url: 'https://api.spoonacular.com/mealplanner/generate',
+        method: 'GET',
+        dataType: 'json',
+        data: {
+            apiKey: mealApp.key,
+            diet: userDiet.toString(),
+            exclude: intolerances.toString(),
+            targetCalories: calories,
+            timeFrame: duration,
+        }
+    }).then((meals) => {
+        console.log(meals)
 
-//         // passes on meals that have been selected 
-//         mealApp.displayMeals(meals);
-//     })
-// }
+        // passes on meals that have been selected 
+        mealApp.displayMeals(meals);
+    })
+}
 // end of AJAX request
 // start of dummy code
 // this second getMeals was created because our API went down
@@ -152,17 +187,17 @@ mealApp.displayMeals = (mealsData) => {
                 const title = mealInfo.title
                 const link = mealInfo.sourceUrl
                 const day_calories = meals_day.nutrients.calories
-                $('.bla').append(`
-                <div class="food-card">
-                <div class="food-card__image">
-                    <img src="https://spoonacular.com/recipeImages/${id}-556x370.jpg" alt="">
-                </div>
-                <div class="food-card__text">
-                    <h4>${title}</h4>
-                    <a href="${link}">go here for food</a>
-                </div>
-            </div>
-            `)
+                $(".results-section__recipes").append(`
+                <div class="recipes__recipe-card">
+                    <div class="recipe-card__image">
+                        <img src="https://spoonacular.com/recipeImages/${id}-1200x1200.jpg" alt="">
+                    </div>
+                    <div class="recipe-card__description">
+                        <h3 class="main-header main-header--recipe">${title}</h3>
+                        <a href="${link}" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
+                    </div>
+                </div> 
+            `);
             }
         }
     } else { 
@@ -172,17 +207,17 @@ mealApp.displayMeals = (mealsData) => {
             const title = mealInfo.title
             const link = mealInfo.sourceUrl
             const day_calories = mealsData.nutrients.calories;
-            $('.bla').append(`
-            <div class="food-card">
-                <div class="food-card__image">
-                    <img src="https://spoonacular.com/recipeImages/${id}-556x370.jpg" alt="">
-                </div>
-                <div class="food-card__text">
-                    <h4>${title}</h4>
-                    <a href="${link}">go here for food</a>
-                </div>
-            </div>
-                `)
+                $(".results-section__recipes").append(`
+                <div class="recipes__recipe-card">
+                    <div class="recipe-card__image">
+                        <img src="https://spoonacular.com/recipeImages/${id}-1200x1200.jpg" alt="">
+                    </div>
+                    <div class="recipe-card__description">
+                        <h3 class="main-header main-header--recipe">${title}</h3>
+                        <a href="${link}" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
+                    </div>
+                </div> 
+            `);
         }
     }
 }
@@ -190,8 +225,8 @@ mealApp.displayMeals = (mealsData) => {
 
 mealApp.init = function() {
     console.log('gitinit');
+    mealApp.quizNavigation();
     mealApp.getUserInfo();
-    
 }
 
 //document ready
