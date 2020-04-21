@@ -4,43 +4,70 @@ const mealApp = {}
 //api key 
 mealApp.key = 'cacba147c38b4f0faff0ce178c6edd1f'
 
-// here
-// const $cachedButton = $('#button');
-// $cachedButton.on('click', function(){
-//         const $currentFormStage = $(this).parent();
-//         const $nextFormStage = $(this).parent().next();
-//         $nextFormStage.show();
-//         $currentFormStage.hide();
+
+const formStages = [
+    "form__stage--step-one",
+    "form__stage--step-two",
+    "form__stage--step-three",
+    "form__stage--step-four",
+]
+let formState = 0
+
+
 
 mealApp.quizNavigation = () => {
+    $(document).bind('keydown', function (e) {
+        const keycode = (event.keyCode ? event.keyCode : event.which);
+        if (e.keyCode == 13) {
+            if (formState === 0) {
+                $('#get-started').trigger('click');
+            } else if (formState === 3) { 
+                jquery_str = '.' + formStages[formState] + ' > .stage__container--step-four > .stage__buttons > .submit'
+                $(jquery_str).trigger('click');
+            } else {
+                jquery_str = '.' + formStages[formState] + ' > .stage__buttons > .next'
+                $(jquery_str).trigger('click');
+            } 
+        }
+    });
+
     $('#get-started').on('click', function(){
+        formState = formState + 1
         const $currentFormStage = $(this).parent();
         const $nextFormStage = $(this).parent().next();
         $nextFormStage.show();
         $currentFormStage.hide();
     });
+
     $('.back').on('click', function(){
+        formState = formState - 1
+
         const $currentFormStage = $(this).parents('.form__stage');
         const $prevFormStage = $(this).parents('.form__stage').prev();
         $prevFormStage.show();
         $currentFormStage.hide();
     });
+
+    // next button
     $('.next').on('click', function(){
+        formState = formState + 1
+
         const $currentFormStage = $(this).parents('.form__stage');
         const $nextFormStage = $(this).parents('.form__stage').next();
         $nextFormStage.show();
         $currentFormStage.hide();
     });
+
     $(".daily-calories__select").on('change', function () {
       $(".duration__container").css("visibility", "visible");
     });
+
     $(".submit").on("click", function () {
       const $currentFormStage = $(this).parents(".quiz-section");
       const $nextFormStage = $(this).parents(".quiz-section").next();
       $nextFormStage.show();
       $currentFormStage.hide();
     });
- 
 }
 
 
@@ -73,107 +100,107 @@ mealApp.getUserInfo = (userDiet, intolerances, calories, duration) => {
 
 
 // //ajax request catches user input and generates meal plan with user selections
-mealApp.getMeals = (userDiet, intolerances, calories, duration) => {
-    $.ajax({
-        url: 'https://api.spoonacular.com/mealplanner/generate',
-        method: 'GET',
-        dataType: 'json',
-        data: {
-            apiKey: mealApp.key,
-            diet: userDiet.toString(),
-            exclude: intolerances.toString(),
-            targetCalories: calories,
-            timeFrame: duration,
-        }
-    }).then((meals) => {
-        console.log(meals)
+// mealApp.getMeals = (userDiet, intolerances, calories, duration) => {
+//     $.ajax({
+//         url: 'https://api.spoonacular.com/mealplanner/generate',
+//         method: 'GET',
+//         dataType: 'json',
+//         data: {
+//             apiKey: mealApp.key,
+//             diet: userDiet.toString(),
+//             exclude: intolerances.toString(),
+//             targetCalories: calories,
+//             timeFrame: duration,
+//         }
+//     }).then((meals) => {
+//         console.log(meals)
 
-        // passes on meals that have been selected 
-        mealApp.displayMeals(meals);
-    })
-}
+//         // passes on meals that have been selected 
+//         mealApp.displayMeals(meals);
+//     })
+// }
 // end of AJAX request
 // start of dummy code
 // this second getMeals was created because our API went down
 // it is our dummy code for testing non API related functions
-// mealApp.getMeals = (apiWeekStructure) => {
-//     // structure of api response
-//     // day
-//     apiDayStructure = {
-//         meals: [
-//             {
-//                 cleanTitle: 'I am food name',
-//                 image: 'http://placegoat.com/300/250',
-//                 link: 'spoonacular.com'
-//             },
-//             {
-//                 cleanTitle: 'I am food name',
-//                 image: 'http://placegoat.com/300/250',
-//                 link: 'spoonacular.com'
-//             },
-//             {
-//                 cleanTitle: 'I am food name',
-//                 image: 'http://placegoat.com/300/250',
-//                 link: 'spoonacular.com'
-//             }
-//         ],
-//         nutrients: {
-//             calories: 2000,
-//         }
-//     }
-//     // week
-//     apiWeekStructure = {
-//         week: {
-//             monday: {
-//                 meals: [
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     },
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     },
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     }
-//                 ],
-//                 nutrients: {
-//                     calories: 2000,
-//                 }
-//             },
-//             tuesday: {
-//                 meals: [
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     },
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     },
-//                     {
-//                         cleanTitle: 'I am food name',
-//                         image: 'http://placegoat.com/300/250',
-//                         link: 'spoonacular.com'
-//                     }
-//                 ],
-//                 nutrients: {
-//                     calories: 2000,
-//                 }
-//             }
+mealApp.getMeals = (apiWeekStructure) => {
+    // structure of api response
+    // day
+    apiDayStructure = {
+        meals: [
+            {
+                cleanTitle: 'I am food name',
+                image: 'http://placegoat.com/300/250',
+                link: 'spoonacular.com'
+            },
+            {
+                cleanTitle: 'I am food name',
+                image: 'http://placegoat.com/300/250',
+                link: 'spoonacular.com'
+            },
+            {
+                cleanTitle: 'I am food name',
+                image: 'http://placegoat.com/300/250',
+                link: 'spoonacular.com'
+            }
+        ],
+        nutrients: {
+            calories: 2000,
+        }
+    }
+    // week
+    apiWeekStructure = {
+        week: {
+            monday: {
+                meals: [
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    },
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    },
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    }
+                ],
+                nutrients: {
+                    calories: 2000,
+                }
+            },
+            tuesday: {
+                meals: [
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    },
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    },
+                    {
+                        cleanTitle: 'I am food name',
+                        image: 'http://placegoat.com/300/250',
+                        link: 'spoonacular.com'
+                    }
+                ],
+                nutrients: {
+                    calories: 2000,
+                }
+            }
 
-//         }
-//     }
+        }
+    }
     
-//     mealApp.displayMeals(apiWeekStructure);
-// }
+    mealApp.displayMeals(apiWeekStructure);
+}
 // end of dummy code
 
 //takes the mealplan information, saves it in variables and displays on the page
@@ -190,7 +217,7 @@ mealApp.displayMeals = (mealsData) => {
                 $(".results-section__recipes").append(`
                 <div class="recipes__recipe-card">
                     <div class="recipe-card__image">
-                        <img src="https://spoonacular.com/recipeImages/${id}-1200x1200.jpg" alt="">
+                        <img src="https://spoonacular.com/recipeImages/${id}-636x393.jpg" alt="">
                     </div>
                     <div class="recipe-card__description">
                         <h3 class="main-header main-header--recipe">${title}</h3>
@@ -210,7 +237,7 @@ mealApp.displayMeals = (mealsData) => {
                 $(".results-section__recipes").append(`
                 <div class="recipes__recipe-card">
                     <div class="recipe-card__image">
-                        <img src="https://spoonacular.com/recipeImages/${id}-1200x1200.jpg" alt="">
+                        <img src="https://spoonacular.com/recipeImages/${id}-636x393.jpg" alt="">
                     </div>
                     <div class="recipe-card__description">
                         <h3 class="main-header main-header--recipe">${title}</h3>
