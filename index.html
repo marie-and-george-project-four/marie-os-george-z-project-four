@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meal Plan App</title>
+    <script src="https://kit.fontawesome.com/de76bc4e98.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
     <!-- Thanks to FontAwesome for a few of the icons -- https://fontawesome.com/license -->
 </head>
 <body>
-<!-- Add required attribute to inputs -->
 <!-- Start: contain the entire multi-step quiz up to the quiz results -->
     <main class="quiz-section wrapper">
         <!-- Form element containing quiz -->
@@ -18,8 +18,8 @@
             <!-- Start: Step 1 -->
             <!-- Fieldsets all changed to divs because fieldsets do not respect flexbox in Chrome -->
             <div class="form__stage form__stage--step-one">
-                <h1 class="main-header">Hi, Welcome to App Name</h1>
-                <p class="main-paragraph">App Name pairs you the with perfect meal plan based on your dietary preference, restrictions and caloric intake</p>
+                <h1 class="main-header">Hi, Welcome to Recipease</h1>
+                <p class="main-paragraph">Recipease pairs you the with perfect meal plan based on your dietary preference, restrictions and caloric intake</p>
                 <button type="button" class="button" id="get-started">Get Started</button>
             </div>
             <!-- End: Step 1 -->
@@ -28,14 +28,14 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">Let's narrow things down a bit</h2>
-                    <p class="main-paragraph main-paragraph--quiz">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. Choose as many as you'd like.</p>
+                    <p class="main-paragraph main-paragraph--quiz">Help us get you setup by letting us know if there is a specific style of diet that you'd prefer. We've started you off below, but please choose whatever is relevant to you.</p>
                 </div>
                 <!-- Checkbox Container -->
                 <div class="stage__container">
                     <!-- Gluten Free Checkbox and Description -->
                     <!-- the value given to all of these checkboxes is in camel case. This is on purpose because they are passed as perameters to an AJAX call -->
                     <div class="checkbox-pair">
-                        <input type="checkbox" name="diet-style[]" id="gluten-free" value="glutenFree" required>
+                        <input type="checkbox" name="diet-style[]" id="gluten-free" value="glutenFree" checked required>
                         <label for="gluten-free" class="checkbox-button checkbox-button--gluten-free main-header main-header--checkbox">Gluten Free</label>
                         <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
                     </div>
@@ -43,39 +43,37 @@
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="ketogenic" value="ketogenic" required>
                         <label for="ketogenic" class="checkbox-button checkbox-button--ketogenic main-header main-header--checkbox">Ketogenic</label>
-                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                        <p class="main-paragraph main-paragraph--checkbox">Very low carb and very high fat.</p>
                     </div>
                     <!-- Vegetarian Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="vegetarian" value="vegetarian" required>
                         <label for="vegetarian" class="checkbox-button checkbox-button--vegetarian main-header main-header--checkbox">Vegetarian</label>
-                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                        <p class="main-paragraph main-paragraph--checkbox">No meat, sometimes eggs and dairy.</p>
                     </div>
                     <!-- Pescatarian Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="pescatarian" value="pescatarian" required>
                         <label for="pescatarian" class="checkbox-button checkbox-button--pescatarian main-header main-header--checkbox">Pescatarian</label>
-                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                        <p class="main-paragraph main-paragraph--checkbox">Vegetarian and sometimes also fish.</p>
                     </div>
                     <!-- Vegan Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="vegan" value="vegan" required>
                         <label for="vegan" class="checkbox-button checkbox-button--vegan main-header main-header--checkbox">Vegan</label>
-                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                        <p class="main-paragraph main-paragraph--checkbox">No meat or animal products.</p>
                     </div>
                     <!-- Paleo Checkbox and Description -->
                     <div class="checkbox-pair">
                         <input type="checkbox" name="diet-style[]" id="paleo" value="paleo" required>
                         <label for="paleo" class="checkbox-button checkbox-button--paleo main-header main-header--checkbox">Paleo</label>
-                        <p class="main-paragraph main-paragraph--checkbox">Strictly exclude gluten, wheat barley and rye.</p>
+                        <p class="main-paragraph main-paragraph--checkbox">A diet presumed to have been eaten by early humans.</p>
                     </div>
                 </div>
                 <!-- Checkbox Container Ends -->
                 <!-- Button Container -->
-                <div class="stage__buttons">
-                    <!-- Maybe add arrow icons? -->
-                    <button type="button" class="button button--form-nav back" id="back">Back</button>
-                    <button type="button" class="button button--form-nav next" id="next">Next</button>
+                <div class="stage__buttons stage__buttons--single">
+                    <button type="button" class="button button--form-nav button--next" id="next">Next</button>
                 </div>
             </div>
             <!-- End: Step 2 -->
@@ -84,14 +82,14 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">Let's set some boundaries</h2>
-                    <p class="main-paragraph main-paragraph--quiz">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan?</p>
+                    <p class="main-paragraph main-paragraph--quiz">Do you suffer from any food intolerances, allergies, or have anything in particular you really don't want in your plan? We've started you off below, but please choose whatever is relevant to you.</p>
                 </div>
                 <!-- Checkbox Container -->
                 <!-- the value given to some of these checkboxes is in camel case. This is on purpose because they are passed as perameters to an AJAX call -->
                 <div class="stage__container">
                     <!-- Dairy Checkbox -->
                     <div class="checkbox-pair checkbox-pair--intolerance">
-                        <input type="checkbox" name="intolerance[]" id="dairy" value="dairy" required>
+                        <input type="checkbox" name="intolerance[]" id="dairy" value="dairy" checked required>
                         <label for="dairy" class="checkbox-button checkbox-button--secondary main-header main-header--checkbox">Dairy</label>
                     </div>
                     <!-- Shellfish Checkbox -->
@@ -139,8 +137,8 @@
                 <!-- Button Container -->
                 <div class="stage__buttons">
                     <!-- Maybe add arrow icons? -->
-                    <button type="button" class="button button--form-nav back" id="back">Back</button>
-                    <button type="button" class="button button--form-nav next" id="next">Next</button>
+                    <button type="button" class="button button--form-nav button--back" id="back">Back</button>
+                    <button type="button" class="button button--form-nav button--next" id="next">Next</button>
                 </div>
             </div>
             <!-- End Step 3 -->
@@ -149,17 +147,17 @@
                 <!-- Description -->
                 <div class="stage__description">
                     <h2 class="main-header main-header--margin">How much food would you like?</h2>
-                    <p class="main-paragraph main-paragraph--quiz">Give us a rough idea of how many calories per day you'd like how just how long you'd like us to plan for. Please choose one of the following:</p>
+                    <p class="main-paragraph main-paragraph--quiz">Give us a rough idea of how many calories per day you'd like how just how long you'd like us to plan for. Start off with your estimated caloric intake below:</p>
                 </div>
                 <!-- Checkbox Container -->
                 <div class="stage__container stage__container--step-four">
                     <!-- Calorie Count Dropdown -->
                     <select name="daily-calories" class="daily-calories__select" id="calories" placeholder="Daily Caloric Intake"required>
                         <!-- Placeholder pseudo-select or actualy placeholder value? -->
-                        <option selected disabled>Daily Caloric Intake</option>
+                        <option disabled>Daily Caloric Intake</option>
                         <option value="1500" id="1500">1,500 Calories</option>
                         <option value="1750" id="1750">1,750 Calories</option>
-                        <option value="2000" id="2000">2,000 Calories</option>
+                        <option selected value="2000" id="2000">2,000 Calories</option>
                         <option value="2250" id="2250">2,250 Calories</option>
                         <option value="2500" id="2500">2,500 Calories</option>
                         <option value="2750" id="2750">2,750 Calories</option>
@@ -187,11 +185,10 @@
                 <!-- Button Container -->
                 <div class="stage__buttons">
                     <!-- Maybe add arrow icons? -->
-                    <button type="button" class="button button--form-nav back" id="back">Back</button>
-                    <button type="button" class="button button--form-nav submit next" id="next">Submit</button>
+                    <button type="button" class="button button--form-nav button--back" id="back">Back</button>
+                    <button type="button" class="button button--form-nav button--submit button--next" id="next">Submit</button>
                 </div>
             </div>
-            <div class="bla"></div>
     </main>
     <!-- End: contain the entire multi-step quiz up to the quiz results -->
     <!-- Start: Results of the quiz -->
@@ -223,41 +220,7 @@
             </ul>
             <!-- Tags of Quiz Filters -->
             <!-- Recipe Results -->
-            <div class="results-section__recipes">
-                <!-- Recipe Card -->
-                <!-- <div class="recipes__recipe-card">
-                    <div class="recipe-card__image">
-                        <img src="http://placegoat.com/1200/1200" alt="">
-                    </div>
-                    <div class="recipe-card__description">
-                        <h3 class="main-header main-header--recipe">Food title</h3>
-                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias, consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
-                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
-                    </div>
-                </div>              
-                <div class="recipes__recipe-card">
-                    <div class="recipe-card__image">
-                        <img src="http://placegoat.com/1200/1200" alt="">
-                    </div>
-                    <div class="recipe-card__description">
-                        <h3 class="main-header main-header--recipe">Food title</h3>
-                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias, consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
-                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
-                    </div>
-                </div>                
-                <div class="recipes__recipe-card">
-                    <div class="recipe-card__image">
-                        <img src="http://placegoat.com/1200/1200" alt="">
-                    </div>
-                    <div class="recipe-card__description">
-                        <h3 class="main-header main-header--recipe">Food title</h3>
-                        <p class="main-paragraph main-paragraph--recipe">Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus beatae assumenda, molestias,
-                        consequuntur facilis neque voluptatem ducimus, nihil perferendis quod nam cumque atque? Porro labore sint dolorem
-                        aperiam eos nobis beatae. Optio dolore deleniti repellat voluptates, odit voluptate consequuntur ut?</p>
-                        <a href="" class="main-paragraph main-paragraph--external-link">Check out the full recipe now</a>
-                    </div>
-                </div> -->
-            </div>
+            <div class="results-section__recipes"></div>
             <div class="stage__buttons stage__buttons--results-section">
                 <button type="button" class="button button--start-over" id="start-over">Start Over</button>
             </div>
@@ -267,6 +230,6 @@
     <!-- jQuery -->
     <script src='https://code.jquery.com/jquery-3.4.0.min.js' integrity='sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=' crossorigin='anonymous'></script>
     <!-- JavaScript -->
-    <script src="./scripts/scriptscratch.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>
